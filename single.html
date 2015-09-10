@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Tech Magazine</title>
+    <!--    google font-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,700italic,500italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/font/font-awesome/css/font-awesome.min.css">
+    <!--offcanvus-->
+    <link rel="stylesheet" href="assets/css/hippo-off-canvas.css">
+    <!--animate css-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--owl.carousel-->
+    <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+    <!--prettyphoto-->
+    <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+    function printPage(id) {
+        var html = "<html>";
+        html += document.getElementById(id).innerHTML;
+
+        html += "</html>";
+
+        var printWin = window.open('', '', 'left=0,top=0,toolbar=0,scrollbars=0,status  =0');
+        printWin.document.write(html);
+        printWin.document.close();
+        printWin.focus();
+        printWin.print();
+        printWin.close();
+    }
+    </script>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <!-- offcanvas-menu start -->
+        <div class="offcanvas-menu offcanvas-effect visible-xs visible-sm">
+            <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+            <h1>Tech Magazine</h1>
+            <div>
+                <div>
+                    <ul id="menu">
+                        <li class="active"><a href="#">news</a></li>
+                        <li><a href="#">mobile</a></li>
+                        <li><a href="#">tablet</a></li>
+                        <li><a href="#">gadgets</a></li>
+                        <li><a href="#">camera</a></li>
+                        <li><a href="#">design</a></li>
+                        <li class="dropdown">
+                            <ul>
+                                <li><a href="#">More 1</a></li>
+                                <li><a href="#">More 2</a></li>
+                                <li><a href="#">More 3</a></li>
+                                <li><a href="#">More 4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- offcanvas-menu end -->
+        <div class="offcanvas-pusher">
+            <div class="content-wrapper">
+                <header>
+                    <div class="top-bar hidden-xs">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="date">
+                                        <p><span>sunday.09 august.2015</span></p>
+                                    </div>
+                                    <!--/.date-->
+                                    <ul class="list-inline top-bar-social">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="logo text-center">
+                                        <a href="#"><img src="assets/img/logo.png" alt="logo"></a>
+                                        <p><span>yes <i>!</i> your news</span></p>
+                                    </div>
+                                    <!--/.logo-->
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="text-right top-cta">
+                                        <ul>
+                                            <li><a href="#">login</a></li>
+                                            <li><span>/</span></li>
+                                            <li><a href="#">register</a></li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">en <span><i class="fa fa-angle-down"></i></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">fr</a></li>
+                                                    <li><a href="#">bn</a></li>
+                                                </ul </li>
+                                        </ul>
+                                        <hr>
+                                        <div id="sb-search" class="sb-search">
+                                            <form>
+                                                <input class="sb-search-input form-control" type="text" value="" name="search" id="search">
+                                                <input class="sb-search-submit" type="submit" value="">
+                                                <span class="sb-icon-search"><i class="fa fa-search"></i></span>
+                                            </form>
+                                        </div>
+                                        <!-- /.sb-search-->
+                                    </div>
+                                    <!--/.top-cta-->
+                                </div>
+                            </div>
+                            <hr class="top-bar-border">
+                        </div>
+                    </div>
+                    <!-- top-bar-->
+                    <nav class="navbar navbar-default mega-menu">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand visible-xs" href="index.html"><img src="assets/img/logo-sm.png" alt=""></a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="main-nav">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">news</a></li>
+                                    <li><a href="#">mobile</a></li>
+                                    <li><a href="#">tablet</a></li>
+                                    <li class="dropdown mega-menu-fw">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">gadgets <span><i class="fa fa-angle-down"></i></span></a>
+                                        <ul class="dropdown-menu">
+                                            <div class="mega-menu-tab">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h1>All Tech News <span><i class="fa fa-angle-double-right"></i></span></h1>
+                                                        <!-- Nav tabs -->
+                                                        <ul class="nav nav-stacked" role="tablist" id="tab3">
+                                                            <li role="presentation" class="active"><a href="#mobile" aria-controls="mobile" role="tab" data-toggle="tab">Mobile <span><i class="fa fa-angle-double-right"></i></span></a></li>
+                                                            <li role="presentation"><a href="#tablets" aria-controls="tablets" role="tab" data-toggle="tab">Tablets <span><i class="fa fa-angle-double-right"></i></span></a></li>
+                                                            <li role="presentation"><a href="#gadgets" aria-controls="gadgets" role="tab" data-toggle="tab">Gadgets <span><i class="fa fa-angle-double-right"></i></span></a></li>
+                                                            <li role="presentation"><a href="#camera" aria-controls="camera" role="tab" data-toggle="tab">Camera <span><i class="fa fa-angle-double-right"></i></span></a></li>
+                                                            <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">design <span><i class="fa fa-angle-double-right"></i></span></a></li>
+                                                            <li role="presentation"><a href="#more" aria-controls="more" role="tab" data-toggle="tab">More <span><i class="fa fa-angle-double-right"></i></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <!-- Tab panes -->
+                                                        <div class="tab-content">
+                                                            <div role="tabpanel" class="tab-pane active" id="mobile">
+                                                                <div class="mega-menu-slider">
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mega-menu-slider-nav">
+                                                                    <a class="next"><i class="fa fa-angle-left"></i></a>
+                                                                    <a class="prev"><i class="fa fa-angle-right"></i></a>
+                                                                </div>
+                                                                <!-- /.partner-nav -->
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane" id="tablets">
+                                                                <div class="mega-menu-slider">
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mega-menu-slider-nav">
+                                                                    <a class="next"><i class="fa fa-angle-left"></i></a>
+                                                                    <a class="prev"><i class="fa fa-angle-right"></i></a>
+                                                                </div>
+                                                                <!-- /.partner-nav -->
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane" id="gadgets">
+                                                                <div class="mega-menu-slider">
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mega-menu-slider-nav">
+                                                                    <a class="next"><i class="fa fa-angle-left"></i></a>
+                                                                    <a class="prev"><i class="fa fa-angle-right"></i></a>
+                                                                </div>
+                                                                <!-- /.partner-nav -->
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane" id="camera">
+                                                                <div class="mega-menu-slider">
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mega-menu-slider-nav">
+                                                                    <a class="next"><i class="fa fa-angle-left"></i></a>
+                                                                    <a class="prev"><i class="fa fa-angle-right"></i></a>
+                                                                </div>
+                                                                <!-- /.partner-nav -->
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane" id="design">
+                                                                <div class="mega-menu-slider">
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mega-menu-slider-nav">
+                                                                    <a class="next"><i class="fa fa-angle-left"></i></a>
+                                                                    <a class="prev"><i class="fa fa-angle-right"></i></a>
+                                                                </div>
+                                                                <!-- /.partner-nav -->
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane" id="more">
+                                                                <div class="mega-menu-slider">
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-1.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-4.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-2.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="assets/img/mega-menu/item-3.jpg" alt="image">
+                                                                        <h3><a href="#">Gadgets users new and fresh news... </a></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mega-menu-slider-nav">
+                                                                    <a class="next"><i class="fa fa-angle-left"></i></a>
+                                                                    <a class="prev"><i class="fa fa-angle-right"></i></a>
+                                                                </div>
+                                                                <!-- /.partner-nav -->
+                                                            </div>
+                                                        </div>
+                                                        <!--/.tab-content-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.mega-menu-tab -->
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">camera</a></li>
+                                    <li><a href="#">design</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">more <span><i class="fa fa-angle-down"></i></span></a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="#">More 1</a></li>
+                                            <li><a href="#">More 2</a></li>
+                                            <li><a href="#">More 3</a></li>
+                                            <li><a href="#">More 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                    </nav>
+                    <!-- /.nav -->
+                </header>
+                <!--/.header-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="single-post single-post-widget animated slideInLeft" id="single-post-print">
+                                <div class="entry-tag">
+                                    <a href="#" class="red">hot news</a>
+                                </div>
+                                <article class="news-post">
+                                    <h2><a href="#">Chevrolet car-saving technology delivers 'superhuman' sight when you need it most</a></h2>
+                                    <ul class="entry-meta">
+                                        <li>Stive Clark</li>
+                                        <li>Aug 4, 2015</li>
+                                    </ul>
+                                    <!--/.entry-meta-->
+                                    <ul class="post-feedback">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-half-o"></i></li>
+                                    </ul>
+                                    <!--/.post-feedback-->
+                                    <div class="comment-share">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                            <li><a href="#"><i class="fa fa-facebook fb-bg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter twitter-bg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus google-bg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-dribbble dribbble-bg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-rss rss-bg"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!--/.comment-share-->
+                                    <div class="post">
+                                        <img src="assets/img/single-blog.jpg" class="img-responsive" alt="image">
+                                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+                                        <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
+                                        <div class="post-feature">
+                                            <blockquote class="pull-left">
+                                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+                                            </blockquote>
+                                            <!--/.blockquote-->
+                                            <div class="post-feature-text">
+                                                <p>But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee.Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? </p>
+                                            </div>
+                                            <!--/.post-feature-post-->
+                                            <p>
+                                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                                            </p>
+                                        </div>
+                                        <!--/.post-feature-->
+                                    </div>
+                                    <!--/.post-->
+                                    <div class="article-meta">
+                                        <div class="row">
+                                            <div class="col-xs-7">
+                                                <ul class="list-inline clearfix article-meta-tag">
+                                                    <li><a href="#">tech</a></li>
+                                                    <li><a href="#">transport</a></li>
+                                                    <li><a href="#">mobile</a></li>
+                                                    <li><a href="#">gadget</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <div class="comment-share pull-right">
+                                                    <ul class="clearfix">
+                                                        <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                        <li>
+                                                            <a href="#" onclick="printPage('single-post-print');"><i class="fa fa-print"></i>Print</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.article-meta-->
+                                </article>
+                                <!--/.news-post-->
+                            </div>
+                            <!--/.single-post-->
+                            <div class="related-news-post">
+                                <div class="post-cat-title">
+                                    <h1>related news</h1>
+                                    <hr>
+                                </div>
+                                <!--/.post-cat-title-->
+                                <div class="post-cat-grid single-post-widget">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <article class="news-post">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <a href="#">
+                                                            <img class="media-object" src="assets/img/mobile/mobile-2.jpg" alt="...">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="post-cat">
+                                                            <a href="#"><span class="badge">mobile</span></a>
+                                                        </div>
+                                                        <!--/.post-cat-->
+                                                        <h3 class="entry-title"><a href="#">Apple launches photo-centric wrist watch for Android</a></h3>
+                                                        <div class="post-info">
+                                                            <ul>
+                                                                <li class="date">10 Aug- 2015</li>
+                                                                <li>by: Eric joan</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="comment-share">
+                                                            <ul>
+                                                                <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                                <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--/.post-info-->
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!--/.news-post-->
+                                            <article class="news-post">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <a href="#">
+                                                            <img class="media-object" src="assets/img/mobile/mobile-3.jpg" alt="...">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="post-cat">
+                                                            <a href="#"><span class="badge">mobile</span></a>
+                                                        </div>
+                                                        <!--/.post-cat-->
+                                                        <h3 class="entry-title"><a href="#">Iphone 6 launches white &amp; Grey colors handset</a></h3>
+                                                        <div class="post-info">
+                                                            <ul>
+                                                                <li class="date">10 Aug- 2015</li>
+                                                                <li>by: Eric joan</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="comment-share">
+                                                            <ul>
+                                                                <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                                <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--/.post-info-->
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!--/.news-post-->
+                                        </div>
+                                        <!--/.col-sm-6-->
+                                        <div class="col-sm-6">
+                                            <article class="news-post">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <a href="#">
+                                                            <img class="media-object" src="assets/img/mobile/mobile-4.jpg" alt="...">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="post-cat">
+                                                            <a href="#"><span class="badge">mobile</span></a>
+                                                        </div>
+                                                        <!--/.post-cat-->
+                                                        <h3 class="entry-title"><a href="#">Iphone 6 launches white &amp; Grey colors handset</a></h3>
+                                                        <div class="post-info">
+                                                            <ul>
+                                                                <li class="date">10 Aug- 2015</li>
+                                                                <li>by: Eric joan</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="comment-share">
+                                                            <ul>
+                                                                <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                                <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--/.post-info-->
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!--/.news-post-->
+                                            <article class="news-post">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <a href="#">
+                                                            <img class="media-object" src="assets/img/mobile/mobile-5.jpg" alt="...">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="post-cat">
+                                                            <a href="#"><span class="badge">mobile</span></a>
+                                                        </div>
+                                                        <!--/.post-cat-->
+                                                        <h3 class="entry-title"><a href="#">Iphone 6 launches white &amp; Grey colors handset</a></h3>
+                                                        <div class="post-info">
+                                                            <ul>
+                                                                <li class="date">10 Aug- 2015</li>
+                                                                <li>by: Eric joan</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="comment-share">
+                                                            <ul>
+                                                                <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                                <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--/.post-info-->
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <!--/.news-post-->
+                                        </div>
+                                        <!--/.col-sm-6-->
+                                    </div>
+                                    <div class="ads-banner-one">
+                                        <a href="#"><img src="assets/img/ad-banner/ad-banner-5.jpg" alt="adsImage"></a>
+                                    </div>
+                                    <!--/.ads-banner-one"-->
+                                </div>
+                            </div>
+                            <!--/.related-news-post-->
+                            <div class="reader-comment">
+                                <div class="post-cat-title">
+                                    <h1>Readers Comments</h1>
+                                    <hr>
+                                </div>
+                                <!--/.post-cat-title-->
+                                <article class="news-post">
+                                    <ul class="media-list">
+                                        <li class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <img class="media-object" src="assets/img/mobile/mobile-3.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h3><a href="#">Sr. Ryan</a></h3>
+                                                <div class="post-info">
+                                                    <ul>
+                                                        <li class="date">10 Aug 2015</li>
+                                                        <li>11 PM</li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.post-info-->
+                                                <p>
+                                                    But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                                </p>
+                                                <div class="comment-reply clearfix">
+                                                    <ul class="pull-right">
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-thumbs-o-down"></i></a>
+                                                        </li>
+                                                        <li><a href="#">reply</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.comment-reply-->
+                                                <hr>
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <a href="#">
+                                                            <img class="media-object" src="assets/img/mobile/mobile-3.jpg" alt="...">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h3><a href="#">Sr. Ryan</a></h3>
+                                                        <div class="post-info">
+                                                            <ul>
+                                                                <li class="date">10 Aug 2015</li>
+                                                                <li>11 PM</li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--/.post-info-->
+                                                        <p>
+                                                            But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                                        </p>
+                                                        <div class="comment-reply clearfix">
+                                                            <ul class="pull-right">
+                                                                <li>
+                                                                    <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><i class="fa fa-thumbs-o-down"></i></a>
+                                                                </li>
+                                                                <li><a href="#">reply</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--/.comment-reply-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.media-body-->
+                                            <hr>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <img class="media-object" src="assets/img/mobile/mobile-3.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h3><a href="#">Sr. Ryan</a></h3>
+                                                <div class="post-info">
+                                                    <ul>
+                                                        <li class="date">10 Aug 2015</li>
+                                                        <li>11 PM</li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.post-info-->
+                                                <p>
+                                                    But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                                </p>
+                                                <div class="comment-reply clearfix">
+                                                    <ul class="pull-right">
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-thumbs-o-down"></i></a>
+                                                        </li>
+                                                        <li><a href="#">reply</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--/.comment-reply-->
+                                            </div>
+                                        </li>
+                                        <!--/.media-->
+                                    </ul>
+                                    <!--/.media-list-->
+                                </article>
+                            </div>
+                            <!--/.reader-comment-->
+                            <div class="ads-banner-one single-post-widget">
+                                <a href="#"><img src="assets/img/ad-banner/ad-banner-5.jpg" alt="adsImage"></a>
+                            </div>
+                            <div class="login-section">
+                                <div class="post-cat-title">
+                                    <h1>log in</h1>
+                                    <hr>
+                                </div>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="nameSix" class="sr-only">Name</label>
+                                                <input type="text" class="form-control" required="" id="nameSix" placeholder="Your Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="emailSix" class="sr-only">Email</label>
+                                                <input type="email" class="form-control" required="" id="emailSix" placeholder="Email Address">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Send Message</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>If your are not a register user please click here &amp; Registration now.</p>
+                                            <button type="submit" class="btn btn-default">Registration</button>
+                                        </div>
+                                    </div>
+                                    <!--end of /.row-->
+                                </form>
+                            </div>
+                            <!--/.login-section-->
+                        </div>
+                        <!--/.col-sm-8-->
+                        <div class="col-sm-4">
+                            <div class="popular-news sidebar-widget">
+                                <div class="post-cat-title">
+                                    <h1>popular news</h1>
+                                    <hr>
+                                </div>
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-1.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Apple launches photo-centric wrist watch for Android</a></h3>
+                                            <div class="post-info">
+                                                <ul>
+                                                    <li class="date">10 Aug- 2015</li>
+                                                    <li>by: Eric joan</li>
+                                                </ul>
+                                            </div>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                            <!--/.post-info-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-2.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Apple launches photo-centric wrist watch for Android</a></h3>
+                                            <div class="post-info">
+                                                <ul>
+                                                    <li class="date">10 Aug- 2015</li>
+                                                    <li>by: Eric joan</li>
+                                                </ul>
+                                            </div>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                            <!--/.post-info-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-3.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Apple launches photo-centric wrist watch for Android</a></h3>
+                                            <div class="post-info">
+                                                <ul>
+                                                    <li class="date">10 Aug- 2015</li>
+                                                    <li>by: Eric joan</li>
+                                                </ul>
+                                            </div>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                            <!--/.post-info-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/mobile-3.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Apple launches photo-centric wrist watch for Android</a></h3>
+                                            <div class="post-info">
+                                                <ul>
+                                                    <li class="date">10 Aug- 2015</li>
+                                                    <li>by: Eric joan</li>
+                                                </ul>
+                                            </div>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> <strong>424</strong>Shares</a></li>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                            <!--/.post-info-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <div class="ads-banner-one sidebar-widget text-center">
+                                    <a href="#"><img src="assets/img/ad-banner/ad-banner-2.jpg" alt="adsImage"></a>
+                                </div>
+                            </div>
+                            <!--/.popular-news-->
+                            <div class="tech-social sidebar-widget clearfix">
+                                <ul>
+                                    <li class="fb-bg">
+                                        <div class="icon-social">
+                                            <a href="#"><span><i class="fa fa-facebook"></i></span></a>
+                                        </div>
+                                        <div class="social-text">
+                                            <a href="#"><span>10.000k</span></a>
+                                            <a href="#"><span class="follow">follow us <i class="fa fa-plus"></i></span></a>
+                                        </div>
+                                    </li>
+                                    <li class="twitter-bg">
+                                        <div class="icon-social">
+                                            <a href="#"><span><i class="fa fa-twitter"></i></span></a>
+                                        </div>
+                                        <div class="social-text">
+                                            <a href="#"><span>10.000k</span></a>
+                                            <a href="#"><span class="follow">follow us <i class="fa fa-check"></i></span></a>
+                                        </div>
+                                    </li>
+                                    <li class="google-bg">
+                                        <div class="icon-social">
+                                            <a href="#"><span><i class="fa fa-google-plus"></i></span></a>
+                                        </div>
+                                        <div class="social-text">
+                                            <a href="#"><span>10.000k</span></a>
+                                            <a href="#"><span class="follow">follow us <i class="fa fa-plus"></i></span></a>
+                                        </div>
+                                    </li>
+                                    <li class="linkedin-bg">
+                                        <div class="icon-social">
+                                            <a href="#"><span><i class="fa fa-linkedin"></i></span></a>
+                                        </div>
+                                        <div class="social-text">
+                                            <a href="#"><span>10.000k</span></a>
+                                            <a href="#"><span class="follow">follow us <i class="fa fa-plus"></i></span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.tech-social-->
+                            <div class="post-reviews sidebar-widget">
+                                <div class="post-cat-title">
+                                    <h1>reviews</h1>
+                                    <hr>
+                                </div>
+                                <!--/.post-cat-title-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-1.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">DSLR is the most old camera at this time readmore about new products</a></h3>
+                                            <ul class="post-feedback">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                            <!--/.post-feedback-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-2.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">DSLR is the most old camera at this time readmore about new products</a></h3>
+                                            <ul class="post-feedback">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                            <!--/.post-feedback-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-3.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">DSLR is the most old camera at this time readmore about new products</a></h3>
+                                            <ul class="post-feedback">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                            <!--/.post-feedback-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-1.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">DSLR is the most old camera at this time readmore about new products</a></h3>
+                                            <ul class="post-feedback">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star-half-o"></i></li>
+                                            </ul>
+                                            <!--/.post-feedback-->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <div class="more-news clearfix">
+                                    <hr>
+                                    <a href="#" class="pull-right">more reviews <i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <!--/.post-reviews-->
+                            <div class="ads-banner-one sidebar-widget text-center">
+                                <a href="#"><img src="assets/img/ad-banner/ad-banner-2.jpg" alt="adsImage"></a>
+                            </div>
+                            <!--/.ads-banner-one-->
+                            <div class="most-comment-section sidebar-widget">
+                                <div class="post-cat-title">
+                                    <h1>most commented</h1>
+                                    <hr>
+                                </div>
+                                <!--/.post-cat-title-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-1.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Sony zoom Camera photo centric for Android</a></h3>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-2.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Samsung launches photo-centric wrist watch for Android</a></h3>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-3.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Mobile call photo centric wrist watch for Android</a></h3>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <article class="news-post">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="assets/img/mobile/thumb-1.jpg" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3><a href="#">Canon Camera  launches photo centric Android camera</a></h3>
+                                            <div class="comment-share">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-comments-o"></i> <strong>4</strong>Comments</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--/.news-post-->
+                                <div class="more-news clearfix">
+                                    <hr>
+                                    <a href="#" class="pull-right">view more <i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                                <!--/.more-news-->
+                            </div>
+                            <!--/.most-comment-section-->
+                            <div class="editor-section sidebar-widget">
+                                <div class="post-cat-title">
+                                    <h1>reviews</h1>
+                                    <hr>
+                                </div>
+                                <!--/.post-cat-title-->
+                                <article class="news-post">
+                                    <img src="assets/img/editor/edito-1.jpg" class="pull-left" alt="editor">
+                                    <p>
+                                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                                    </p>
+                                    <p>
+                                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+                                    </p>
+                                    <a href="#" class="btn btn-xs btn-primary">read more</a>
+                                </article>
+                                <!--/.news-post-->
+                            </div>
+                            <!--/.editor-section-->
+                            <div class="ads-banner-two sidebar-widget text-center">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="assets/img/ad-banner/ad-banner-3.jpg" alt="ads"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/img/ad-banner/ad-banner-3.jpg" alt="ads"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/img/ad-banner/ad-banner-3.jpg" alt="ads"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/img/ad-banner/ad-banner-3.jpg" alt="ads"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.ads-banner-two-->
+                            <div class="reader-section sidebar-widget">
+                                <div class="post-cat-title">
+                                    <h1>readers corner</h1>
+                                    <hr>
+                                </div>
+                                <!--/.post-cat-title-->
+                                <article class="news-post">
+                                    <img src="assets/img/editor/edito-1.jpg" class="pull-left" alt="editor">
+                                    <p>
+                                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base.
+                                    </p>
+                                    <p>
+                                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+                                    </p>
+                                    <a href="#" class="btn btn-xs btn-primary">read more</a>
+                                </article>
+                            </div>
+                            <!--/.reader-section-->
+                            <div class="ads-banner-one sidebar-widget ">
+                                <a href="#"><img src="assets/img/ad-banner/ad-banner-4.jpg" class="img-responsive" alt="adsImage"></a>
+                            </div>
+                            <!--/.ads-banner-one"-->
+                        </div>
+                        <!--/.col-sm-4-->
+                    </div>
+                </div>
+                <!--/.container-->
+                <div class="container">
+                    <section class="tech-live-section">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <article class="tech-live-post">
+                                    <div class="post-thumb">
+                                        <a href="#"><img src="assets/img/tech-live/tech-1.jpg" alt="tach"></a>
+                                        <a class="play-trigger" href="https://www.youtube.com/watch?v=3Fnf8ofDqq4" data-gal="prettyPhoto[pp_gal]" title="live video"><i class="fa fa-play"></i></a>
+                                    </div>
+                                    <!--/.post-thumb-->
+                                    <div class="video-caption">
+                                        <h3>iphone 7 lanch with operation tutorial video</h3>
+                                    </div>
+                                    <!--/.video-caption-->
+                                </article>
+                                <!--/.tech-live-post-->
+                            </div>
+                            <!--/.col-sm-4-->
+                            <div class="col-md-7">
+                                <ul class="list-inline tech-live-sidebar">
+                                    <li class="col-sm-6">
+                                        <article class="tech-live-post">
+                                            <div class="post-thumb">
+                                                <a href="#"><img src="assets/img/tech-live/tech-2.jpg" class="img-responsive" alt="tach"></a>
+                                                <a class="play-trigger" href="https://www.youtube.com/watch?v=3Fnf8ofDqq4" data-gal="prettyPhoto[pp_gal]" title="live video"><i class="fa fa-play"></i></a>
+                                            </div>
+                                            <!--/.post-thumb-->
+                                            <div class="video-caption">
+                                                <h3>iphone 7 lanch video</h3>
+                                            </div>
+                                            <!--/.video-caption-->
+                                        </article>
+                                        <!--/.tech-live-post-->
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <article class="tech-live-post">
+                                            <div class="post-thumb">
+                                                <a href="#"><img src="assets/img/tech-live/tech-2.jpg" class="img-responsive" alt="tach"></a>
+                                                <a class="play-trigger" href="https://www.youtube.com/watch?v=3Fnf8ofDqq4" data-gal="prettyPhoto[pp_gal]" title="live video"><i class="fa fa-play"></i></a>
+                                            </div>
+                                            <!--/.post-thumb-->
+                                            <div class="video-caption">
+                                                <h3>iphone 7 lanch video</h3>
+                                            </div>
+                                            <!--/.video-caption-->
+                                        </article>
+                                        <!--/.tech-live-post-->
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <article class="tech-live-post">
+                                            <div class="post-thumb">
+                                                <a href="#"><img src="assets/img/tech-live/tech-2.jpg" class="img-responsive" alt="tach"></a>
+                                                <a class="play-trigger" href="https://www.youtube.com/watch?v=3Fnf8ofDqq4" data-gal="prettyPhoto[pp_gal]" title="live video"><i class="fa fa-play"></i></a>
+                                            </div>
+                                            <!--/.post-thumb-->
+                                            <div class="video-caption">
+                                                <h3>iphone 7 lanch video</h3>
+                                            </div>
+                                            <!--/.video-caption-->
+                                        </article>
+                                        <!--/.tech-live-post-->
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <article class="tech-live-post">
+                                            <div class="post-thumb">
+                                                <a href="#"><img src="assets/img/tech-live/tech-2.jpg" class="img-responsive" alt="tach"></a>
+                                                <a class="play-trigger" href="https://www.youtube.com/watch?v=3Fnf8ofDqq4" data-gal="prettyPhoto[pp_gal]" title="live video"><i class="fa fa-play"></i></a>
+                                            </div>
+                                            <!--/.post-thumb-->
+                                            <div class="video-caption">
+                                                <h3>iphone 7 lanch video</h3>
+                                            </div>
+                                            <!--/.video-caption-->
+                                        </article>
+                                        <!--/.tech-live-post-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.col-sm-8-->
+                        </div>
+                        <!--/.row-->
+                    </section>
+                    <!--/.tech-live-section-->
+                    <section class="subscribe-section sidebar-widget">
+                        <p></p>
+                        <form class="text-center">
+                            <span class="subscribe-intro"><span>Sign up </span>for the latest news</span>
+                            <input type="email" placeholder="" />
+                            <input type="submit" value="sign up" />
+                        </form>
+                    </section>
+                    <!--/.subscribe-section-->
+                </div>
+                <!--/.container-->
+                <footer>
+                    <div class="container">
+                        <div class="tech-footer">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-widget-tech footer-widget">
+                                        <div class="post-cat-title">
+                                            <h1>about tech</h1>
+                                            <hr>
+                                        </div>
+                                        <!--/.post-cat-title-->
+                                        <img src="assets/img/tech-news.jpg" class="img-responsive" alt="image">
+                                        <p>Collaborativelyadministrate empowered marketsplug-and-play networks. Dynamic procrastinate after.marketsplug-and-play networks. Dynamic procrastinate users after.</p>
+                                    </div>
+                                    <!--/.footer-widget-tech-->
+                                </div>
+                                <!--/.col-md-3-->
+                                <div class="col-md-3 .col-sm-6">
+                                    <div class="footer-widget-discover footer-widget">
+                                        <div class="post-cat-title">
+                                            <h1>about tech</h1>
+                                            <hr>
+                                        </div>
+                                        <!--/.post-cat-title-->
+                                        <ul class="list-unstyled pull-left">
+                                            <li><a href="#">mobile</a></li>
+                                            <li><a href="#">Tablets</a></li>
+                                            <li><a href="#">Gadgets</a></li>
+                                            <li><a href="#">Design</a></li>
+                                            <li><a href="#">Camera</a></li>
+                                            <li><a href="#">Apps</a></li>
+                                            <li><a href="#">Login</a></li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Membership</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Jobs</a></li>
+                                            <li><a href="#">Site Map</a></li>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Contact us</a></li>
+                                            <li><a href="#">Newsletter Alerts</a></li>
+                                            <li><a href="#">Podcast</a></li>
+                                            <li><a href="#">SMS Subscription</a></li>
+                                            <li><a href="#">Advertisement Policy</a></li>
+                                            <li><a href="#">Report technical issue</a></li>
+                                            <li><a href="#">Complaints &amp; Corrections</a></li>
+                                            <li><a href="#">Terms &amp; Conditions</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Cookie Policy</a></li>
+                                            <li><a href="#">Securedrop</a></li>
+                                            <li><a href="#">Archives</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--/.footer-widget-discover-->
+                                </div>
+                                <!--/.col-md-3-->
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-widget-editor footer-widget">
+                                        <div class="post-cat-title">
+                                            <h1>editors picks</h1>
+                                            <hr>
+                                        </div>
+                                        <article class="news-post">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" src="assets/img/editor/editor-3.jpg" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h3><a href="#">Collaborati administrate empoweredmarkets</a></h3>
+                                                    <ul class="post-feedback">
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star-half-o"></i></li>
+                                                    </ul>
+                                                    <!--/.post-feedback-->
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="news-post">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" src="assets/img/editor/editor-2.jpg" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h3><a href="#">Collaborati administrate empoweredmarkets</a></h3>
+                                                    <ul class="post-feedback">
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star-half-o"></i></li>
+                                                    </ul>
+                                                    <!--/.post-feedback-->
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="news-post">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" src="assets/img/editor/editor-4.jpg" alt="...">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h3><a href="#">Collaborati administrate empoweredmarkets</a></h3>
+                                                    <ul class="post-feedback">
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star-half-o"></i></li>
+                                                    </ul>
+                                                    <!--/.post-feedback-->
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <!--/.footer-widget-editor-->
+                                </div>
+                                <!--/.col-md-3-->
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="post-cat-title">
+                                        <h1>tech photos</h1>
+                                        <hr>
+                                    </div>
+                                    <div class="photo-flickrStream">
+                                        <ul id="flickr" class="list-inline">
+                                            <!-- html code injected via javascript -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/.col-md-3-->
+                            </div>
+                        </div>
+                        <!--/.tech-footer-->
+                    </div>
+                    <!--/.container-->
+                    <div class="copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <ul class="copy-social">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!--/.col-sm-4-->
+                                <div class="col-sm-6">
+                                    <p> &copy; Copyright 2015 - Tech News Mag.com. <span>All Rights Reserved</span></p>
+                                </div>
+                                <!--/.col-sm-4-->
+                                <div class="col-sm-3">
+                                    <p>Technology News Magazine</p>
+                                </div>
+                                <!--/.col-sm-4-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.copyright-->
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--    /#main-wrapper-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/search/classie.js"></script>
+    <script src="assets/search/uisearch.js"></script>
+    <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <script src="assets/js/flickerPhoto.min.js"></script>
+    <script src="assets/js/hippo-off-canvas.js"></script>
+    <script src="assets/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.animatecss.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+    new UISearch(document.getElementById('sb-search'));
+    </script>
+</body>
+
+</html>
